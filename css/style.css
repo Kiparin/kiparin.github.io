@@ -1,23 +1,25 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: black; /* Темный фон */
+    color: #00ff00; /* Зеленый текст */
+    font-family: 'Courier New', Courier, monospace; /* Моноширинный шрифт */
+    overflow: hidden; /* Убирает прокрутку */
 }
 header {
-    background-color: #4CAF50;
+    background-color: #000000;
     color: white;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
 }
 nav {
     margin: 20px 0;
+    text-align: end;
 }
 nav a {
     margin: 0 15px;
     text-decoration: none;
-    color: #4CAF50;
+    color: #00ff00;
 }
 nav a:hover {
     text-decoration: underline;
@@ -28,9 +30,112 @@ main {
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #050505;
+    color: #00ff00;
+    column-rule-color: #00ff00;
     position: absolute;
     width: 100%;
+    height: 70px;
     bottom: 0;
 }
+
+.grid-container {
+    display: grid; /* Устанавливаем контейнер как Grid */
+    grid-template-columns: 30px 270px 30px 100px; /* 3 колонки одинаковой ширины */
+    gap: 10px; /* Промежуток между элементами */
+    padding: 10px; /* Внутренний отступ контейнера */
+}
+
+.grid-item {
+    background-color: #4CAF50; /* Цвет фона для элементов */
+    color: white; /* Цвет текста */
+    padding: 20px; /* Внутренние отступы */
+    text-align: center; /* Выравнивание текста по центру */
+    border-radius: 5px; /* Скругление углов */
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1; /* Занять все доступное пространство */
+}
+
+.flex-section {
+    background-color: #333; /* Фон */
+    color: white; /* Цвет текста */
+    text-align: center; /* Выравнивание текста */
+    padding: 10px; /* Отступы */
+}
+
+/* Анимация для текста */
+.matrix {
+    text-align: center;
+    padding: 50px;
+}
+
+.imageMe{
+    float: right;
+    margin-right: 50px;
+}
+
+.flex-container {
+    flex-direction: row; /* Горизонтальное направление по умолчанию */
+    justify-content: center; /* Центрируем элементы по горизонтали */
+    align-items: flex-start; /* Выравниваем элементы по вертикали вниз */
+}
+
+.rounded-image {
+    border-radius: 250px; /* Устанавливает радиус закругления */
+}
+
+.code {
+    font-size: 12px;
+    line-height: 1.0;
+    display: flex;
+    flex-wrap: wrap;
+    color: #00ff00;
+    justify-content: center;
+}
+
+.code span {
+    opacity: 0;
+    animation: fall 1s infinite;
+}
+
+@keyframes fall {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Задание разных задержек для эффекта */
+.code span:nth-child(1) { animation-delay: 0s; }
+.code span:nth-child(2) { animation-delay: 0.12s; }
+.code span:nth-child(3) { animation-delay: 0.2s; }
+.code span:nth-child(4) { animation-delay: 0.6s; }
+.code span:nth-child(5) { animation-delay: 0.4s; }
+.code span:nth-child(6) { animation-delay: 0.64s; }
+.code span:nth-child(7) { animation-delay: 0.6s; }
+.code span:nth-child(8) { animation-delay: 0.43s; }
+.code span:nth-child(9) { animation-delay: 0.8s; }
+.code span:nth-child(10) { animation-delay: 0.9s; }
+.code span:nth-child(11) { animation-delay: 1s; }
+.code span:nth-child(12) { animation-delay: 1.16s; }
+.code span:nth-child(13) { animation-delay: 1.24s; }
+.code span:nth-child(14) { animation-delay: 1.3s; }
+.code span:nth-child(15) { animation-delay: 1.43s; }
+.code span:nth-child(16) { animation-delay: 1.5s; }
+.code span:nth-child(17) { animation-delay: 1.6s; }
+.code span:nth-child(18) { animation-delay: 1.7s; }
