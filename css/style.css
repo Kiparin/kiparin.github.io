@@ -4,7 +4,6 @@ body {
     background-color: black; /* Темный фон */
     color: #00ff00; /* Зеленый текст */
     font-family: 'Courier New', Courier, monospace; /* Моноширинный шрифт */
-    overflow: hidden; /* Убирает прокрутку */
 }
 header {
     background-color: #000000;
@@ -26,6 +25,7 @@ nav a:hover {
 }
 main {
     padding: 20px;
+    position: absolute;
 }
 footer {
     text-align: center;
